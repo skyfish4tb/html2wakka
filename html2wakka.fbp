@@ -1,0 +1,46 @@
+[Project]
+Version=3
+Api=fb (FreeBASIC),win (Windows)
+Description=html2wakka
+Grouping=2
+AddMainFiles=1
+AddModuleFiles=1
+ResExport=
+CompileIfNewer=0
+IncVersion=0
+RunCmd=0
+FixExportFuncName=1
+[Make]
+Module=Module Build,fbc -c -z fixdebug
+Recompile=0
+IsCompile64=0
+BuildDebugInfo=0
+Current=5
+CurrentCompiler=5
+1=Windows dll,fbc -s gui -dll -z fixdebug -export -mt
+2=Library,fbc -lib
+3=Library¡¾Fix¡¿,fbc -lib -R -g -z cstyle
+4=Windows dll(Debug),fbc -g -s gui -dll  -export -mt -R
+5=Windows CMD [Ä¬ÈÏ],fbc -s console -g -R
+6=Windows CMD [ÑÏ¸ñ¼æÈÝ],fbc -s console -z cstyle -z compatname105
+7=Windows dll(FixDebug),fbc -g -s gui -dll  -export -mt -R -z fixdebug -z cstyle
+Output=html2wakka.exe
+Run=
+Delete=
+[File]
+Main=3
+1=
+2=
+3=unconvert.bas
+[BreakPoint]
+1=
+3=
+[FileInfo]
+1=0,119,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2=0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3=0,436,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+[TabOrder]
+TabOrder=3
+[FBD_POApplication]
+CheckAppTime=0
+FBD_POFullTrackCode=0
